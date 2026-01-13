@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    /* scroll-behavior: smooth; */
+}
+
+body {
+    background-color: #F5EFED;
+    /* font-size: 1.4rem; */
+}
+
+/* header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 320px;
+    text-align: center;
+    background-color: #0F0A0A;
+    color: #F5EFED;
+} */
+
+
+header {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 3.6rem;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo img {
+    width: 10rem;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 2.4rem;
+    margin-top: 3rem;
+}
+
+.menu-link {
+    text-decoration: none;  /* para quitar el subrayado del la ancla */
+    cursor: pointer;        /* para que aparezca la manita del cursor */
+    position: relative; /* Muy importante para que el ::after se posicione respecto al link */
+    padding-bottom: 1rem;
+    color: black;
+}
+
+.menu-link:hover {
+    color: #BDBF09;
+}
+
+/* Creamos la línea con el pseudo elemento ::after */
+.menu-link::after {
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1rem;
+    background-color: #D96C06;
+    transition: width 0.3s ease;
+    position: absolute;
+}
+
+.menu-link:hover::after {
+    content: "";
+    width: 100%;
+}
+
+/* .menu-link:hover {
+} */
+/* 
+main {
+    max-width: auto;
+    margin: 0 auto;
+    background-color: #F5EFED;
+} */
