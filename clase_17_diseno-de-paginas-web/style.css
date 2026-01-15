@@ -1,0 +1,200 @@
+/* 
+
+paleta de colores
+
+#0F0A0A
+#F5EFED
+#2292A4
+#BDBF09
+#D96C06
+
+*/
+
+:root {
+    /* Definimos nuestra fuente principal (Limpia y moderna) */
+    /* --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; */
+    --font-main: 'Courier New', Courier, monospace;    
+    
+    /* Definimos nuestra fuente para detalles "Tech" o Código */
+    --font-code: 'Cascadia Code', 'Courier New', monospace;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    color: #0F0A0A;
+    background-color: #F5EFED;
+}
+
+/* Usamos la Courier solo para los títulos o etiquetas pequeñas para dar ese look de programador */
+h1, h2, .tag-completado {
+    font-family: var(--font-code);
+    letter-spacing: -1px;
+}
+
+html {
+    font-size: 62.5%;
+    /* scroll-behavior: smooth; */
+}
+
+/* header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 320px;
+    text-align: center;
+    background-color: #0F0A0A;
+    color: #F5EFED;
+} */
+
+/*******************************************
+
+Logo y barra de navegacion
+
+*******************************************/
+header {
+    
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 3.6rem;
+    margin-bottom: 2rem;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo img {
+    width: 10rem;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 2.4rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.menu-link {
+    text-decoration: none;  /* para quitar el subrayado del la ancla */
+    cursor: pointer;        /* para que aparezca la manita del cursor */
+    position: relative; /* Muy importante para que el ::after se posicione respecto al link */
+    padding-bottom: 1rem;
+    color: black;
+}
+
+.menu-link:hover {
+    color: #BDBF09;
+}
+
+/*******************************************
+
+Creamos la lÃ­nea con el pseudo elemento ::after
+
+*******************************************/
+
+
+.menu-link::after {
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1rem;
+    background-color: #D96C06;
+    transition: width 0.3s ease;
+    position: absolute;
+}
+
+.menu-link:hover::after {
+    content: "";
+    width: 100%;
+}
+
+/* .menu-link:hover {
+} */
+
+
+/*******************************************
+
+Tbla de cursos
+
+*******************************************/
+
+.contenedor-tabla {
+    overflow-x: auto;
+    margin: 20px 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F5EFED; /* Fondo claro de tu paleta */
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.tabla-diplomas {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(15, 10, 10, 0.1); /* Usando tu negro para la sombra */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Encabezado con tu Azul Turquesa (#2292A4) */
+.tabla-diplomas th {
+    background-color: #2292A4; 
+    color: #F5EFED; /* Texto en tu blanco hueso */
+    text-align: left;
+    padding: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Filas con tu Negro (#0F0A0A) para el texto */
+.tabla-diplomas td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #F5EFED;
+    color: #0F0A0A; 
+}
+
+/* Efecto Zebra suave usando tu blanco hueso */
+.tabla-diplomas tbody tr:nth-child(even) {
+    background-color: rgba(245, 239, 237, 0.5);
+}
+
+/* HOVER: Resaltado con tu Naranja (#D96C06) pero muy suave o en el borde */
+.tabla-diplomas tbody tr:hover {
+    background-color: rgba(34, 146, 164, 0.05); /* Un toque del azul */
+    border-left: 5px solid #D96C06; /* Línea naranja al pasar el mouse */
+    transition: all 0.2s ease;
+}
+
+/* Etiquetas de estatus con tu Verde Olivo/Amarillo (#BDBF09) */
+.tag-completado {
+    background-color: #BDBF09;
+    color: #0F0A0A;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/* Diploma con tu Naranja (#D96C06) */
+.tag-meta {
+    background-color: #D96C06;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
