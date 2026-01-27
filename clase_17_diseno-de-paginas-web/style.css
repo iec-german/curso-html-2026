@@ -14,6 +14,7 @@ paleta de colores
 @font-face {
     font-family: "MiDancingScript"; /* puede ser cualquier nombre germanLetra */
     src: url(/assets/fonts/dancingScript.ttf) format("truetype");
+    /* src: url(https://pcymac.com/diseno-de-paginas-web/assets/fonts/dancingScript.ttf) format("truetype"); */
     /* font-weight: normal; */
     font-style: normal;
     font-display: swap; /* Esto ayuda a que el texto no desaparezca mientras carga */
